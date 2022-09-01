@@ -7,6 +7,7 @@ import java.io.File;
 
 public class MusicUtil {
     private static Clip clip;
+
     static {
         File bgMusicFile = new File("music/bg.wav");
         try {
@@ -20,8 +21,10 @@ public class MusicUtil {
         }
     }
 
-    // 2.播放
-    public static void playBackground(){
+    /**
+     * 2.播放
+     */
+    public static void playBackground() {
         //循环播放
         clip.setFramePosition(0);
         clip.loop(Clip.LOOP_CONTINUOUSLY);
